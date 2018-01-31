@@ -1,0 +1,9 @@
+---
+applications:
+- name: nodehelo
+  memory: 256M
+  instances: 1
+  path: .
+  domain: cfapps.io
+  command: npm install && npm start
+  
