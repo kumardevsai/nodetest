@@ -23,7 +23,7 @@ var assert = require('assert');
 function getURI() {
     if(process.env.VCAP_SERVICES){   
 	var env = JSON.parse(process.env.VCAP_SERVICES);
-	var fullurl = (env['MongoDB-Service'][0]['credentials']['uri']);
+	var fullurl = (env['mlab'][0]['credentials']['uri']);
 	var front = fullurl.split('?')[0];
 	return front
     } else {
