@@ -63,7 +63,7 @@ app.get('/set', function (req, res) {
     // jam this straight into mongo
     var url = getURI();
     mc.connect(url, function(err,client) {
-    var db = client.db('db');
+    var db = client.db('CloudFoundry_h28rseju_cmi4q0oj');
 	assert.equal(null,err);
 	db.collection('node').insertOne(req.query, function (err, result) {
 	    assert.equal(err, null);
@@ -75,7 +75,7 @@ app.get('/set', function (req, res) {
 app.get('/get', function (req, res) {
     var url = getURI();
     mc.connect(url, function(err,client) {
-    var db = client.db('db');
+    var db = client.db('CloudFoundry_h28rseju_cmi4q0oj');
 	assert.equal(null,err);
 	var cursor = db.collection('node').find();
 	cursor.each(function(err,doc) {
