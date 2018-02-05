@@ -9,5 +9,5 @@ applications:
   domain: cfapps.io
   command: npm install && npm start
   services:
-    - hellodev
+    - nodeMongoDB
   
