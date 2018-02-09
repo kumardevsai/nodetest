@@ -52,7 +52,7 @@ app.get('/con', function (req, res) {
     var url = getURI();
     mc.connect(url, function(err,db) {
 	assert.equal(null,err);
-	res.send("connected to serversfdsfdss sdfds dsfds");
+	res.send("connected to servers111");
 	console.log("connected to server");
 	db.close()
     })
